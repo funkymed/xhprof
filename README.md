@@ -29,8 +29,11 @@ define('XHPROF_URL', "http://localhost/xhprof/");
 ~~~
 
 XHPROF_PATH : is the real path of your xhprof lib directory
+
 installed with brew it will be in : /usr/local/Cellar/php[php version]-xhprof/[code]/xhprof_lib/utils/
+
 XHPROF_NAME : is the namespace to define your project
+
 XHPROF_URL  : is your local url to xhprof website
 
 #####Local xhprof website
@@ -54,4 +57,5 @@ Xhprof::footer();
 
 ###How to use :
 call your website and add the parameter in url ?xhprof=1
+
 you will have a link in the bottom of your page to display xhprof
