@@ -54,3 +54,7 @@ Your bootstrap here
 if(class_exists('Xhprof'))
     Xhprof::footer();
 ~~~
+
+###How to use :
+call your website and add the parameter in url ?xhprof=1
+you will have a link in the bottom of your page to display xhprof
