@@ -1,7 +1,7 @@
 <?php
 
 if(!file_exists('config_xhprof.php'))
-    return false;
+    throw new Exception('config_xhprof.php not found');
 
 include "config_xhprof.php";
 /**
@@ -25,7 +25,6 @@ class Xhprof
             include_once XHPROF_PATH.'xhprof_lib.php';
             include_once XHPROF_PATH.'/xhprof_runs.php';
             xhprof_enable(XHPROF_FLAGS_CPU + XHPROF_FLAGS_MEMORY);
-
         }
     }
 
@@ -38,7 +37,7 @@ class Xhprof
             $xhprof_runs        = new XHProfRuns_Default();
             $run_id             = $xhprof_runs->save_run($xhprof_data, $profiler_namespace);
             $profiler_url       = sprintf(XHPROF_URL.'xhprof_html/index.php?run=%s&source=%s', $run_id, $profiler_namespace);
-            echo '<a href="'. $profiler_url .'" target="_blank">Profiler output</a>';
+            echo '<div><a href="'. $profiler_url .'" target="_blank">Profiler output</a></div>';
         }
     }
 }

@@ -41,18 +41,15 @@ download the last package and put it in your localhost
 
 ####Example :
 ~~~
-if(file_exists('xhprof.php'))
-    include "xhprof.php";
+include "xhprof.php";
 
-if(class_exists('Xhprof'))
-    Xhprof::header();
+Xhprof::header();
 
 include "dummy/dummy.php";
 
 Your bootstrap here
 
-if(class_exists('Xhprof'))
-    Xhprof::footer();
+Xhprof::footer();
 ~~~
 
 ###How to use :
